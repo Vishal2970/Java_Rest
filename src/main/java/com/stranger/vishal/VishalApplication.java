@@ -6,16 +6,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VishalApplication  implements CommandLineRunner {
+public class VishalApplication implements CommandLineRunner {
 
-	@Autowired
-	DB db;
-	public static void main(String[] args) {
-		SpringApplication.run(VishalApplication.class, args);
-	}
+    @Autowired
+    DB db;
 
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println(db.getData());
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(VishalApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println(db.getData());
+    }
 }
